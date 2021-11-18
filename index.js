@@ -155,7 +155,7 @@ function kyun(seconds){
 
 async function starts() {
 	const client = new WAConnection()
-	client.version = [2,2142,12]
+	client.version = [2, 2121, 7]
 	client.logger.level = 'warn'
 	console.log(banner.string)
 	client.on('qr', () => {
@@ -2537,9 +2537,7 @@ async function starts() {
 							var result = await res.json()
 							buff = await getBuffer(`http://brizas-api.herokuapp.com/photomod/v1/menu?apikey=${apikey}&profileimg=${result.resultado.link}&background=https://i.imgur.com/tVKFNFk.png&description=${menuwel}&title=${ti}&username=${sender.split('@')[0]}`)
 							await client.sendMessage(from, audiobuff, audio, {mimetype: Mimetype.mp4Audio, ptt: true})
-							fs.writeFileSync('ian.jpg', buff)
 							await client.sendMessage(from, buff, image, {quoted: mek, caption: help(prefix, time, pushname, 'wa.me/'+sender.split('@')[0]), quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": cr, 'jpegThumbnail': fs.readFileSync('./img/logobot.png')}}}})
-							fs.unlinkSync(ran)
 						})
 					} catch (e) {
 						console.log(e)
