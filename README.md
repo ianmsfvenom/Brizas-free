@@ -40,8 +40,8 @@ O Brizas bot é um bot com a base do [MhankBars](https://github.com/MhankBarBar/
 [Termux](https://play.google.com/store/apps/details?id=com.termux&hl=pt_BR&gl=US)
 
 ```
-git clone https://github.com/ianmsfvenom/Brizas-bot
-cd Brizas-bot
+git clone https://github.com/ianmsfvenom/Brizas-free
+cd Brizas-free
 bash install.sh
 npm install
 
@@ -59,7 +59,7 @@ pm2 start index.js
 # 🙋‍♂️ Como mudar as configurações do bot
 ```
 cd
-cd Brizas-bot
+cd Brizas-free
 apt install nano
 nano config.js
 
